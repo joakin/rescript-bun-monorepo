@@ -1,0 +1,16 @@
+{
+  "name": "@rescript-bun-monorepo/app",
+  "version": "0.0.0",
+  "description": "ReScript starter package",
+  "scripts": {
+    "res:build": "rescript",
+    "res:clean": "rescript clean",
+    "res:dev": "rescript watch"
+  },
+  "keywords": [
+    "rescript"
+  ],
+  "dependencies": {
+    "@rescript-bun-monorepo/common": "workspace:*"
+  }
+}

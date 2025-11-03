@@ -1,0 +1,9 @@
+{
+  "name": "@rescript-bun-monorepo/app",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "dependencies": ["@rescript-bun-monorepo/common"],
+  "compiler-flags": []
+}

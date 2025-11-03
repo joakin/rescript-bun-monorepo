@@ -1,0 +1,30 @@
+{
+  "name": "rescript-bun-monorepo",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "catalog": {
+      "rescript": "^12.0.0-rc.3",
+      "rescript-bun": "^2"
+    }
+  },
+  "scripts": {
+    "build": "rescript build",
+    "clean": "rescript clean",
+    "dev": "rescript watch",
+    "format": "rescript format",
+    "test": "bun test ./packages/*/src/**/*_test.res.js",
+    "test:watch": "bun test --watch./packages/*/src/**/*_test.res.js"
+  },
+  "dependencies": {
+    "@rescript-bun-monorepo/common": "workspace:*",
+    "@rescript-bun-monorepo/app": "workspace:*"
+  },
+  "devDependencies": {
+    "rescript": "catalog:",
+    "rescript-bun": "catalog:"
+  },
+  "packageManager": "bun@1.1.0"
+}

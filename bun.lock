@@ -1,0 +1,52 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "rescript-bun-monorepo",
+      "dependencies": {
+        "@rescript-bun-monorepo/app": "workspace:*",
+        "@rescript-bun-monorepo/common": "workspace:*",
+      },
+      "devDependencies": {
+        "rescript": "catalog:",
+        "rescript-bun": "catalog:",
+      },
+    },
+    "packages/app": {
+      "name": "@rescript-bun-monorepo/app",
+      "version": "0.0.0",
+      "dependencies": {
+        "@rescript-bun-monorepo/common": "workspace:*",
+      },
+    },
+    "packages/common": {
+      "name": "@rescript-bun-monorepo/common",
+      "version": "0.0.0",
+    },
+  },
+  "catalog": {
+    "rescript": "^12.0.0-rc.3",
+    "rescript-bun": "^2",
+  },
+  "packages": {
+    "@rescript-bun-monorepo/app": ["@rescript-bun-monorepo/app@workspace:packages/app"],
+
+    "@rescript-bun-monorepo/common": ["@rescript-bun-monorepo/common@workspace:packages/common"],
+
+    "@rescript/darwin-arm64": ["@rescript/darwin-arm64@12.0.0-rc.3", "", { "os": "darwin", "cpu": "arm64" }, "sha512-d6OMJWnW8I9DgYPNw+9Gy72tOcgRqry+NkpVWYYU4+Ay/LAfCs1W+AWUmsKTlxwTe2JTLhXRX3HzrqXSQoC6tg=="],
+
+    "@rescript/darwin-x64": ["@rescript/darwin-x64@12.0.0-rc.3", "", { "os": "darwin", "cpu": "x64" }, "sha512-ualm4FZRztHaxY7YbEbSgNQwBPRPEsyn30/xHSkuCY2CV7W7808H29X33bqnDkQZ1XxmnG3z2bz9UoZcJJnf6A=="],
+
+    "@rescript/linux-arm64": ["@rescript/linux-arm64@12.0.0-rc.3", "", { "os": "linux", "cpu": "arm64" }, "sha512-StPyP+KHY1k2CQrVLV52VnQvgeQIKz8woEYB0JRL4LtYDb6g6jVj9aXiq6ZWyVo9vxas1zSCzCvzrXubIsgkmg=="],
+
+    "@rescript/linux-x64": ["@rescript/linux-x64@12.0.0-rc.3", "", { "os": "linux", "cpu": "x64" }, "sha512-HB9K4huyr8zCET5BnUJQgskMpiJXERFc7P2mO0vDgMKgmDEmEeOVTUfFiO9aqCwFP/ujGFsWb47SEUxTmHOCcA=="],
+
+    "@rescript/runtime": ["@rescript/runtime@12.0.0-rc.3", "", {}, "sha512-Ihdnppw7A+ArLwfnLPcz04jh6ZaKADo0Rc6vMHYQ2+Dw+snO5VbxJ2As5ahVt9nUVL56w1k9pWgrIoLtb1eHcA=="],
+
+    "@rescript/win32-x64": ["@rescript/win32-x64@12.0.0-rc.3", "", { "os": "win32", "cpu": "x64" }, "sha512-Eyy61o6Wk3Cgiy/99zFCzxumL1WHOGEdbxU+ksqghuD3s2RgBWBobSygf3nhcoNBibXI0Fhpu+XXXoTOsTiQ9w=="],
+
+    "rescript": ["rescript@12.0.0-rc.3", "", { "dependencies": { "@rescript/runtime": "12.0.0-rc.3" }, "optionalDependencies": { "@rescript/darwin-arm64": "12.0.0-rc.3", "@rescript/darwin-x64": "12.0.0-rc.3", "@rescript/linux-arm64": "12.0.0-rc.3", "@rescript/linux-x64": "12.0.0-rc.3", "@rescript/win32-x64": "12.0.0-rc.3" }, "bin": { "bsc": "cli/bsc.js", "rescript": "cli/rescript.js", "bstracing": "cli/bstracing.js", "rescript-tools": "cli/rescript-tools.js", "rescript-legacy": "cli/rescript-legacy.js" } }, "sha512-8EOLvO6p5MxpprqpN4tbblfk6uJbz2Q5g/VHA7ii7TJu98JFNLehRjPNHhlEk2G4Lx+PZraSnGudTxBVmyLNoQ=="],
+
+    "rescript-bun": ["rescript-bun@2.1.0", "", { "peerDependencies": { "rescript": ">= 12.0.0-alpha.4" } }, "sha512-8INIikN97UlmJgPy5DAnx0fzkqq8Ux6Glj6iYE+SURfLr66PsgaVTgpmlpXBrBjTM/bhaAL82Ulc0gI60YdFYg=="],
+  }
+}

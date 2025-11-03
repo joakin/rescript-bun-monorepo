@@ -1,0 +1,11 @@
+{
+  "name": "rescript-bun-monorepo",
+  "sources": [],
+  "package-specs": {
+    "module": "esmodule",
+    "in-source": true
+  },
+  "suffix": ".res.js",
+  "dependencies": ["@rescript-bun-monorepo/app", "@rescript-bun-monorepo/common"],
+  "compiler-flags": []
+}

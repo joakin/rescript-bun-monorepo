@@ -1,0 +1,10 @@
+{
+  "name": "@rescript-bun-monorepo/common",
+  "namespace": "Common",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "dependencies": ["rescript-bun"],
+  "compiler-flags": []
+}
