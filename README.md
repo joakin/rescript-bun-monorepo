@@ -57,15 +57,16 @@ node packages/app/src/Demo.res.js
 1. Create a new directory in `packages/your-package-name/`
 2. Add a `package.json` with scoped name (e.g., `@rescript-bun-monorepo/your-package-name`)
 3. Add a `rescript.json` configuration
-4. **Add the new package to root `package.json` dependencies**:
+4. **Add the new package to root `package.json` dependencies** and run `bun install` to create the necessary symlinks:
+
    ```json
    {
      "dependencies": {
        "@rescript-bun-monorepo/your-package-name": "workspace:*"
      }
    }
-   1. Run `bun install` to create the necessary symlinks
    ```
+
 5. **Add the new package to root `rescript.json` dependencies**:
    ```json
    {
