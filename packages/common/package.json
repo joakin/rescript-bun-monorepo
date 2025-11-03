@@ -2,9 +2,5 @@
   "name": "@rescript-bun-monorepo/common",
   "version": "0.0.0",
   "description": "Common ReScript utilities",
-  "scripts": {
-    "res:build": "rescript",
-    "res:clean": "rescript clean",
-    "res:dev": "rescript watch"
-  }
+  "scripts": {}
 }

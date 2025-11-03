@@ -26,40 +26,24 @@ bun install
 
 ```sh
 bun run build
-# or
-bun run res:build
 ```
 
 ### Watch mode (development)
 
 ```sh
 bun run dev
-# or
-bun run res:dev
 ```
 
 ### Clean build artifacts
 
 ```sh
 bun run clean
-# or
-bun run res:clean
 ```
 
 ### Format code
 
 ```sh
 bun run format
-```
-
-## Working with Individual Packages
-
-You can also work with individual packages:
-
-```sh
-cd packages/app
-bun run res:build
-bun run res:dev
 ```
 
 ## Run Demo
@@ -80,6 +64,7 @@ node packages/app/src/Demo.res.js
        "@rescript-bun-monorepo/your-package-name": "workspace:*"
      }
    }
+   1. Run `bun install` to create the necessary symlinks
    ```
 5. **Add the new package to root `rescript.json` dependencies**:
    ```json
@@ -87,7 +72,6 @@ node packages/app/src/Demo.res.js
      "dependencies": ["@rescript-bun-monorepo/your-package-name"]
    }
    ```
-6. Run `bun install` to create the necessary symlinks
 
 ### Why This Setup is Required
 
@@ -105,7 +89,10 @@ This monorepo uses Bun workspaces with **isolated install mode** for dependency 
 
 - Install dependencies: `bun install`
 - Add dependency to specific package: `cd packages/package-name && bun add dependency`
+- For dependencies that can be used across packages add them to the top level
+  package.json in the catalog so that all packages share the same versions.
 - Add dev dependency to root: `bun add -d dependency`
+  - Move it to the catalog
 
 ### Workspace Dependencies
 
@@ -119,7 +106,7 @@ This monorepo uses Bun workspaces with **isolated install mode** for dependency 
 // Root package.json
 {
   "dependencies": {
-    "@teneo/new-package": "workspace:*"
+    "@rescript-bun-monorepo/new-package": "workspace:*"
   }
 }
 
